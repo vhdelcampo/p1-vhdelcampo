@@ -1,0 +1,36 @@
+name: $(date:yyyyMMdd)$(rev:.rr) #20200319.00
+
+pr:
+  - master
+
+stages:
+  - stage:
+      jobs:
+        - job:
+          pool:
+            vmImage: ubuntu-18.04
+          steps:
+            - script: dotnet build
+
+  - stage:
+      jobs:
+        - job:
+          pool:
+            vmImage: ubuntu-18.04
+          steps:
+            - script: dotnet test --collect:"XPlat Code Coverage"
+
+  - stage:
+      jobs:
+        - job:
+          pool:
+            vmImage: ubuntu-18.04
+          steps:
+            - script: |
+                docker login
+                docker image build -f dockerfile -t fredbelotte/p1proj .
+                docker image push fredbelotte/p1proj
+                docker logout
+
+trigger:
+  - master
