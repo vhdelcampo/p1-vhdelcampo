@@ -27,8 +27,8 @@ namespace PizzaBox.Client
     public void ConfigureServices(IServiceCollection services)
     {
       services.AddControllersWithViews();
-      services.AddDbContext<PizzaBoxDbContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("main")));
-      services.AddSingleton<PizzaBoxRepository>(); // lifetime of the application for all requests
+      // services.AddDbContext<PizzaBoxDbContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("main")));
+      // services.AddScoped<PizzaBoxRepository>(); // lifetime of the application for all requests
       //services.AddScoped<IRepository, PizzaBoxRepository>(); // lifetime of 1 request for all method calls
       //services.AddTransient<IRepository, PizzaBoxRepository>(); // lifetime of 1 method call within 1 request
     }
@@ -48,11 +48,8 @@ namespace PizzaBox.Client
       }
       app.UseHttpsRedirection();
       app.UseStaticFiles();
-
       app.UseRouting();
-
       app.UseAuthorization();
-
       app.UseEndpoints(endpoints =>
       {
         endpoints.MapControllerRoute(

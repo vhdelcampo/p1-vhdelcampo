@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/vdelcampo/training-code/p1-project/PizzaBox.Storage/PizzaBox.Storage.csproj": {}
+    "/home/vdelcampo/revature_projects/p1-project/PizzaBox.Storage/PizzaBox.Storage.csproj": {}
   },
   "projects": {
-    "/home/vdelcampo/training-code/p1-project/PizzaBox.Domain/PizzaBox.Domain.csproj": {
+    "/home/vdelcampo/revature_projects/p1-project/PizzaBox.Domain/PizzaBox.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/vdelcampo/training-code/p1-project/PizzaBox.Domain/PizzaBox.Domain.csproj",
+        "projectUniqueName": "/home/vdelcampo/revature_projects/p1-project/PizzaBox.Domain/PizzaBox.Domain.csproj",
         "projectName": "PizzaBox.Domain",
-        "projectPath": "/home/vdelcampo/training-code/p1-project/PizzaBox.Domain/PizzaBox.Domain.csproj",
+        "projectPath": "/home/vdelcampo/revature_projects/p1-project/PizzaBox.Domain/PizzaBox.Domain.csproj",
         "packagesPath": "/home/vdelcampo/.nuget/packages/",
-        "outputPath": "/home/vdelcampo/training-code/p1-project/PizzaBox.Domain/obj/",
+        "outputPath": "/home/vdelcampo/revature_projects/p1-project/PizzaBox.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/vdelcampo/.nuget/NuGet/NuGet.Config"
@@ -57,14 +57,14 @@
         }
       }
     },
-    "/home/vdelcampo/training-code/p1-project/PizzaBox.Storage/PizzaBox.Storage.csproj": {
+    "/home/vdelcampo/revature_projects/p1-project/PizzaBox.Storage/PizzaBox.Storage.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/vdelcampo/training-code/p1-project/PizzaBox.Storage/PizzaBox.Storage.csproj",
+        "projectUniqueName": "/home/vdelcampo/revature_projects/p1-project/PizzaBox.Storage/PizzaBox.Storage.csproj",
         "projectName": "PizzaBox.Storage",
-        "projectPath": "/home/vdelcampo/training-code/p1-project/PizzaBox.Storage/PizzaBox.Storage.csproj",
+        "projectPath": "/home/vdelcampo/revature_projects/p1-project/PizzaBox.Storage/PizzaBox.Storage.csproj",
         "packagesPath": "/home/vdelcampo/.nuget/packages/",
-        "outputPath": "/home/vdelcampo/training-code/p1-project/PizzaBox.Storage/obj/",
+        "outputPath": "/home/vdelcampo/revature_projects/p1-project/PizzaBox.Storage/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/vdelcampo/.nuget/NuGet/NuGet.Config"
@@ -78,8 +78,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "/home/vdelcampo/training-code/p1-project/PizzaBox.Domain/PizzaBox.Domain.csproj": {
-                "projectPath": "/home/vdelcampo/training-code/p1-project/PizzaBox.Domain/PizzaBox.Domain.csproj"
+              "/home/vdelcampo/revature_projects/p1-project/PizzaBox.Domain/PizzaBox.Domain.csproj": {
+                "projectPath": "/home/vdelcampo/revature_projects/p1-project/PizzaBox.Domain/PizzaBox.Domain.csproj"
               }
             }
           }

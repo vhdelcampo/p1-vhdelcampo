@@ -8073,11 +8073,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/vdelcampo/training-code/p1-project/PizzaBox.Testing/PizzaBox.Testing.csproj",
+      "projectUniqueName": "/home/vdelcampo/revature_projects/p1-project/PizzaBox.Testing/PizzaBox.Testing.csproj",
       "projectName": "PizzaBox.Testing",
-      "projectPath": "/home/vdelcampo/training-code/p1-project/PizzaBox.Testing/PizzaBox.Testing.csproj",
+      "projectPath": "/home/vdelcampo/revature_projects/p1-project/PizzaBox.Testing/PizzaBox.Testing.csproj",
       "packagesPath": "/home/vdelcampo/.nuget/packages/",
-      "outputPath": "/home/vdelcampo/training-code/p1-project/PizzaBox.Testing/obj/",
+      "outputPath": "/home/vdelcampo/revature_projects/p1-project/PizzaBox.Testing/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/vdelcampo/.nuget/NuGet/NuGet.Config"
@@ -8091,8 +8091,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "/home/vdelcampo/training-code/p1-project/PizzaBox.Storage/PizzaBox.Storage.csproj": {
-              "projectPath": "/home/vdelcampo/training-code/p1-project/PizzaBox.Storage/PizzaBox.Storage.csproj"
+            "/home/vdelcampo/revature_projects/p1-project/PizzaBox.Storage/PizzaBox.Storage.csproj": {
+              "projectPath": "/home/vdelcampo/revature_projects/p1-project/PizzaBox.Storage/PizzaBox.Storage.csproj"
             }
           }
         }

@@ -185,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/vdelcampo/training-code/p1-project/PizzaBox.Domain/PizzaBox.Domain.csproj",
+      "projectUniqueName": "/home/vdelcampo/revature_projects/p1-project/PizzaBox.Domain/PizzaBox.Domain.csproj",
       "projectName": "PizzaBox.Domain",
-      "projectPath": "/home/vdelcampo/training-code/p1-project/PizzaBox.Domain/PizzaBox.Domain.csproj",
+      "projectPath": "/home/vdelcampo/revature_projects/p1-project/PizzaBox.Domain/PizzaBox.Domain.csproj",
       "packagesPath": "/home/vdelcampo/.nuget/packages/",
-      "outputPath": "/home/vdelcampo/training-code/p1-project/PizzaBox.Domain/obj/",
+      "outputPath": "/home/vdelcampo/revature_projects/p1-project/PizzaBox.Domain/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/vdelcampo/.nuget/NuGet/NuGet.Config"

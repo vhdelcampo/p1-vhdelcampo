@@ -3,12 +3,7 @@
 <form action="/pizza/create" method="post">
   @Html.AntiForgeryToken()
 
-  <select asp-for="@Model.Crust">
-    @foreach (var item in @Model.CrustList)
-    {
-      <option value="@item.Name">item</option>
-    }
-  </select>
+  @* 
 
   @foreach (var item in @Model.SizeList)
   {
@@ -18,7 +13,7 @@
   @foreach(var item in @Model.ToppingList)
   {
     <input type="checkbox" name="@Model.Toppings" value="@item.Name" />
-  }
+  } *@
 
   <button type="submit">Create</button>
 </form>

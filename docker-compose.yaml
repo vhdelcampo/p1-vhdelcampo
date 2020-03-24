@@ -2,9 +2,7 @@ version: "3.7"
 
 services:
   app:
-    build:
-      context: .
-      dockerfile: dockerfile
+    image: vhdelcampo/p1proj
     networks:
       - skynet
     ports:

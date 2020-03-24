@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using PizzaBox.Client.Models;
 using PizzaBox.Storage.Repositories;
 
@@ -6,11 +7,12 @@ namespace PizzaBox.Client.Controllers
 {
   public class AccountController : Controller
   {
-    private PizzaBoxRepository _pbr;
+    private UserRepository _ur;
+    private ILogger<AccountController> _logger;
 
-    public AccountController(PizzaBoxRepository repository)
+    public AccountController(ILogger<AccountController> logger)
     {
-      _pbr = repository;
+      _logger = logger;
     }
 
     [HttpGet]
@@ -24,7 +26,7 @@ namespace PizzaBox.Client.Controllers
     {
       if (ModelState.IsValid)
       {
-        var acct = _pbr.CheckAccount(account.Username, account.Password);
+        var acct = _ur.CheckAccount(account.Username, account.Password);
 
         if (acct != null)
         {
