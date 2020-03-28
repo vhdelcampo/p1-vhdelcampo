@@ -5,15 +5,15 @@ namespace PizzaBox.Domain.Models
 {
   public class User
   {
-    public long UserId { get; set; }
-    public string Username { get; set; }
+    public string UserId { get; set; }
     public string Password { get; set; }
     public string UserType { get; set; }
+
     public List<Order> Orders { get; set; }
 
-    public User()
+    public override string ToString()
     {
-      UserId = DateTime.Now.Ticks;
+      return $"{UserId}";
     }
   }
 }

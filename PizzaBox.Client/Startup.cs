@@ -9,8 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using PizzaBox.Storage;
-using PizzaBox.Storage.Repositories;
+using PizzaBox.Storing.Databases;
 
 namespace PizzaBox.Client
 {
@@ -27,10 +26,6 @@ namespace PizzaBox.Client
     public void ConfigureServices(IServiceCollection services)
     {
       services.AddControllersWithViews();
-      // services.AddDbContext<PizzaBoxDbContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("main")));
-      // services.AddScoped<PizzaBoxRepository>(); // lifetime of the application for all requests
-      //services.AddScoped<IRepository, PizzaBoxRepository>(); // lifetime of 1 request for all method calls
-      //services.AddTransient<IRepository, PizzaBoxRepository>(); // lifetime of 1 method call within 1 request
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -57,5 +52,6 @@ namespace PizzaBox.Client
                   pattern: "{controller=Home}/{action=Index}/{id?}");
       });
     }
+
   }
 }
