@@ -40,26 +40,26 @@ stages:
   #           env:
   #             SONAR_LOGIN: $(sonar_login)
 
-  # - stage: pack
-  #   jobs:
-  #     - job:
-  #       pool:
-  #         vmImage: ubuntu-18.04
-  #       steps:
-  #         - task: Docker@2
-  #           inputs:
-  #             containerRegistry: "docker"
-  #             command: "login"
-  #         - script: |
-  #             docker image build -f dockerfile -t $DOCKER_IMAGE .
-  #             docker image push $DOCKER_IMAGE
-  #           workingDirectory: $(working_dir)
-  #           env:
-  #             DOCKER_IMAGE: $(image_name)
-  #         - task: Docker@2
-  #           inputs:
-  #             containerRegistry: "docker"
-  #             command: "logout"
+  - stage: pack
+    jobs:
+      - job:
+        pool:
+          vmImage: ubuntu-18.04
+        steps:
+          - task: Docker@2
+            inputs:
+              containerRegistry: "docker"
+              command: "login"
+          - script: |
+              docker image build -f dockerfile -t $DOCKER_IMAGE .
+              docker image push $DOCKER_IMAGE
+            workingDirectory: $(working_dir)
+            env:
+              DOCKER_IMAGE: $(image_name)
+          - task: Docker@2
+            inputs:
+              containerRegistry: "docker"
+              command: "logout"
 
   - stage: deploy
     jobs:
@@ -81,6 +81,6 @@ trigger:
 
 variables:
   - name: image_name
-    value: fredbelotte/p1proj
+    value: vhdelcampo/p1proj
   - name: working_dir
-    value: $(System.DefaultWorkingDirectory)/p1-project
+    value: $(System.DefaultWorkingDirectory)/p1-vhdelcampo
