@@ -1,0 +1,28 @@
+@{
+  Layout = "~/Views/Shared/_LayoutCustomer.cshtml";
+  ViewData["Title"] = "Customer Order History";
+}
+
+@model List<OrderModel>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">OrderId</th>
+      <th scope="col">Cost</th>
+      <th scope="col">OrderDate</th>
+      <th scope="col">Location</th>
+    </tr>
+  </thead>
+  <tbody>    
+    @foreach (var item in @Model)
+    {
+      <tr>
+        <td>@item.OrderId</td>
+        <td>$@item.Cost</td>
+        <td>@item.OrderDate</td>
+        <td>@item.Location</td>
+      </tr>
+    }    
+  </tbody>
+</table>

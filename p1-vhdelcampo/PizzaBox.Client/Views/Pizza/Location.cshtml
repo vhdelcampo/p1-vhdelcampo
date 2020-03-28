@@ -1,0 +1,21 @@
+@{
+  Layout = "~/Views/Shared/_LayoutCustomer.cshtml";
+  ViewData["Title"] = "Choose Location";
+}
+
+@model PizzaBox.Client.Models.LocationModel
+
+<form class="form-group" action="/pizza/location" method="post">
+  @Html.AntiForgeryToken()
+    <div class="form-group">
+      <label>Select Location
+        <select class="form-control" asp-for="@Model.Location">
+        @foreach (var item in @Model.Locations)
+        {
+          <option value="@item.Location">@item</option>
+        }
+        </select>
+      </label>
+    </div>
+    <button class="btn btn-primary" type="submit">Select Store</button>
+</form>

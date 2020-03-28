@@ -1,0 +1,38 @@
+@{
+  Layout = "~/Views/Shared/_LayoutCustomer.cshtml";
+  ViewData["Title"] = "Create Pizza";
+}
+
+@model PizzaBox.Client.Models.PizzaModel
+
+<form class="form-group" action="/pizza/create" method="post">
+  @Html.AntiForgeryToken()
+
+    <div class="form-group">
+      <label>Select Pizza:
+        <select class="form-control" asp-for="@Model.pizzaType">
+        @foreach (var item in @Model.PizzaList)
+        {
+          <option value="@item.Name">@item</option>
+        }
+        </select>
+      </label>
+    </div>
+
+    <br>
+
+    <div class="form-group">
+      <label>Select Size:
+        <select class="form-control" asp-for="@Model.size">
+        @foreach (var item in @Model.SizeList)
+        {
+          <option value="@item.Name">@item</option>
+        }
+        </select>
+      </label>
+    </div>
+
+    <br>  
+    
+    <button class="btn btn-primary" type="submit">Create</button>
+</form>

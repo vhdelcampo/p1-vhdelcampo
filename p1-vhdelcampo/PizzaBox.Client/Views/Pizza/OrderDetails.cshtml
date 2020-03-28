@@ -1,0 +1,61 @@
+@{
+  Layout = "~/Views/Shared/_LayoutCustomer.cshtml";
+  ViewData["Title"] = "Order Details";
+}
+
+@model List<PizzaModel>
+
+@{TempData["count"] = @Model.Count;}
+
+@{decimal totalCost = 0;}
+@foreach (var item in @Model)
+{
+  totalCost += item.Cost;
+}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Pizza Type</th>
+      <th scope="col">Pizza Size</th>
+      <th scope="col">Cost</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach (var item in @Model)
+    {
+      <tr>
+        <td>@item.pizzaType</td>
+        <td>@item.size</td>
+        <td>$@item.Cost</td>
+    </tr>
+    }
+  </tbody>
+  <tfoot>
+    <tr>
+      <th>Total</th>
+      <td></td>
+      <td>$@totalCost</td>
+    </tr>
+  </tfoot>
+</table>
+
+
+<h4>@ViewBag.Error</h4>
+
+<br>
+
+@{TempData["totalCost"] = @totalCost.ToString();}
+
+<a href="/pizza/create" class="btn btn-info" role="button">Add Another Pizza</a>
+
+<br>
+<br>
+
+<a href="/pizza/pizzahome/" class="btn btn-info" role="button">Cancel Order</a>
+
+<br>
+<br>
+
+<a href="/pizza/checkout/" class="btn btn-info" role="button">Checkout</a>
+
